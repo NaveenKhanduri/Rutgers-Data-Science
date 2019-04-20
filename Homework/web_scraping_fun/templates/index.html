@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Info</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+        .responsive {
+        width: 100%;
+        height: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class = "index"></div>
+    <div class="container">
+            <div class="jumbotron text-center">
+            <h1>Mission To Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrapeItAll" role="button">Scrape New Data</a></p>            
+    </div>
+    <div class = "row">
+        <h2>Latest Mars News</h2>
+        <h3> {{ scrapeDict.mars_news_title }} </h3>
+        <p> {{ scrapeDict.mars_news_summary }} </p>
+    </div>
+    <div class = "row justify-content-between">
+        <div class = "col-lg-8 col-md-8">
+            <h3>Featured Image</h3>
+            <img src = {{ scrapeDict.featured_image }} class = "responsive" />           
+        </div>
+        <div class = "col-lg-4 col-md-4">
+            <div class = row>
+                <div class = "jumbotron text-center">
+                    <h3> Current Weather on Mars</h3>
+                    <p>{{ scrapeDict.mars_weather }}</p>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "jumbotron text-center">
+                    <h3>Mars Facts</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <h2>Mars Hemispheres</h2>
+        <div class = "row">
+            <div class = "col-lg-6 col-md-6">
+                <img src = "{{ scrapeDict.hemisphere_images1 }}"  class = "responsive" /> 
+                <h3>Cerberus Hemisphere Enhanced</h3>
+            </div>
+            <div class = "col-lg-6 col-md-6">
+                <img src = "{{ scrapeDict.hemisphere_images2 }}" class = "responsive" />
+                <h3>Schiaparelli Hemisphere Enhanced</h3>
+
+            </div>
+        </div>
+     </div>
+     <div class = "row">
+            <div class = "row">
+                <div class = "col-lg-6 col-md-6">
+                    <img src = "{{ scrapeDict.hemisphere_images3 }}" class = "responsive"  />         
+                    <h3>Syrtis Major Hemisphere Enhanced</h3>
+                   
+                </div>
+                <div class = "col-lg-6 col-md-6">
+                    <img src = "{{ scrapeDict.hemisphere_images4 }}" class = "responsive" />
+                    <h3> Valles Marineris Hemisphere Enhanced </h3>
+    
+                </div>
+            </div>
+         </div>
+
+
+</body>
+
+</html>

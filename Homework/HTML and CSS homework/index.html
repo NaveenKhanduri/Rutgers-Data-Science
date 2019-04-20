@@ -1,0 +1,66 @@
+<!Doctype HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Landing Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "weatherscript.js" type = "text/javascript"></script>
+
+
+</head>
+
+
+
+
+<!---- this is  in every page code, and is the tabs on the top of the web page -->
+
+<body>
+        <div class="tab">
+                <button class="tablinks" onclick = "opentab(event, 'Visualizations')">Visualizations</button>                            
+                 <button class="tablinks" onclick="opentab(event, 'Comparisons')">Comparisons</button>
+                 <button class = "tablinks"  onclick = "opentab(event, 'Data')">Table of Data</button>
+                 <button class = "tablinks" onclick = "opentab(event, 'Home Page')">Landing Page</button>
+            </div>
+            <div id = "Data" class = "tabcontent">
+                <p> <a href = "weathertable.htm" target = "_self">Raw Data</a></p>
+            </div>
+            <div id = "Home Page" class = "tabcontent">
+                <p> <a href = "page1.html" target = "_self">Home Page</a></p>
+            </div>
+            <div id="Comparisons" class="tabcontent">                    
+                    <p><a href = "comparison.html" target = "_self">here</a></p>
+            </div>
+
+            <div id = "Visualizations" class = "tabcontent">
+                    <p><a href="vis1.html" target="_self">City Latitude vs. Max Temperature</a> </p>
+                    <p><a href="vis2.html" target="_self">City Latitude vs. Humidity</a>  </p>
+                    <p><a href="vis3.html" target="_self">City Latitude vs. Cloudiness</a> </p>   
+                    <p><a href="vis2.html" target="_self">City Latitude vs. Wind Speed</a> </p>    
+            </div>
+        </body>
+
+
+
+
+            <body>
+                    <div>
+                        <h1>
+                            Summary: Latitude vs. X
+                        </h1>
+                    </div>
+                        <p>
+                            <h3>Synopsis:</h3>
+                            The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis,
+                            we first pulled data from the  <a href = "https://openweathermap.org/" target = "_self">OpenWeatherMap API</a> 
+                            to assemble a dataset on over 500 Cities.
+                        </p>
+                    
+                        <p>
+                            After Assembling the data set, we used matplotlib to plot various aspects of the weather vs. latitude.
+                             Factors we looked into included: temperature, cloudiness, wind speed, and humidity. 
+                             This site provides a detailed analysis of each plot, as well as a comparison of the various aspects.
+                        </p>
+                    </body>
+
+
